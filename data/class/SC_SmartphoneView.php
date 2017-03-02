@@ -21,22 +21,19 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-/**
- * バッチ処理用 の基底クラス.
- *
- * @package Page
- * @author LOCKON CO.,LTD.
- * @version $Id$
- */
-class SC_Batch
+class SC_SmartphoneView extends SC_SiteView_Ex
 {
-    /**
-     * バッチ処理を実行する
-     *
-     * @param  mixed $argv コマンドライン引数
-     * @return mixed バッチの実行結果
-     */
-    public function execute($argv = '')
+    public function __construct($setPrevURL = true)
     {
+        parent::__construct($setPrevURL);
+    }
+
+    public function init()
+    {
+        parent::init();
+
+        $this->_smarty->template_dir = realpath(SMARTPHONE_TEMPLATE_REALDIR);
+        $this->_smarty->compile_dir = realpath(SMARTPHONE_COMPILE_REALDIR);
+        $this->assignTemplatePath(DEVICE_TYPE_SMARTPHONE);
     }
 }

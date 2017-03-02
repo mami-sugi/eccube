@@ -21,22 +21,13 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-/**
- * バッチ処理用 の基底クラス.
- *
- * @package Page
- * @author LOCKON CO.,LTD.
- * @version $Id$
- */
-class SC_Batch
+class SC_InstallView extends SC_View_Ex
 {
-    /**
-     * バッチ処理を実行する
-     *
-     * @param  mixed $argv コマンドライン引数
-     * @return mixed バッチの実行結果
-     */
-    public function execute($argv = '')
+    public function __construct($template_dir, $compile_dir = COMPILE_REALDIR)
     {
+        parent::__construct();
+
+        $this->_smarty->template_dir = realpath($template_dir);
+        $this->_smarty->compile_dir = realpath($compile_dir);
     }
 }

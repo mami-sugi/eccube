@@ -22,21 +22,38 @@
  */
 
 /**
- * バッチ処理用 の基底クラス.
+ * クッキー用クラス
  *
- * @package Page
- * @author LOCKON CO.,LTD.
- * @version $Id$
  */
-class SC_Batch
+class SC_Cookie
 {
-    /**
-     * バッチ処理を実行する
-     *
-     * @param  mixed $argv コマンドライン引数
-     * @return mixed バッチの実行結果
-     */
-    public function execute($argv = '')
+    public $expire;
+
+    // コンストラクタ
+    public function __construct($day = COOKIE_EXPIRE)
     {
+        // 有効期限
+        $this->expire = time() + ($day * 24 * 3600);
+    }
+
+    // クッキー書き込み
+
+    /**
+     * @param string $key
+     */
+    public function setCookie($key, $val)
+    {
+        setcookie($key, $val, $this->expire, ROOT_URLPATH, DOMAIN_NAME);
+    }
+
+    /**
+     * クッキー取得
+     *
+     * EC-CUBE をURLパスルート以外にインストールしている場合、上位ディレクトリの値も(劣後ではあるが)取得する点に留意。
+     * @param string $key
+     */
+    public function getCookie($key)
+    {
+        return isset($_COOKIE[$key]) ? $_COOKIE[$key] : null;
     }
 }
