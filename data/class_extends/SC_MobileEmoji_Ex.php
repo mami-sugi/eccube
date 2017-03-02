@@ -21,8 +21,8 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-require_once CLASS_REALDIR . 'SC_Batch.php';
+require_once CLASS_REALDIR . 'SC_MobileEmoji.php';
 
-class SC_Batch_Ex extends SC_Batch
+class SC_MobileEmoji_Ex extends SC_MobileEmoji
 {
 }

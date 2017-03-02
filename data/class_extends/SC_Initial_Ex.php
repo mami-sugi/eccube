@@ -21,8 +21,16 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-require_once CLASS_REALDIR . 'SC_Batch.php';
+require_once CLASS_REALDIR . 'SC_Initial.php';
 
-class SC_Batch_Ex extends SC_Batch
+/**
+ * アプリケーションの初期設定クラス(拡張).
+ *
+ * SC_Initial をカスタマイズする場合はこのクラスを編集する.
+ *
+ * @author LOCKON CO.,LTD.
+ * @version $Id$
+ */
+class SC_Initial_Ex extends SC_Initial
 {
 }

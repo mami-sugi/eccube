@@ -21,8 +21,17 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-require_once CLASS_REALDIR . 'SC_Batch.php';
+require_once CLASS_REALDIR . 'util/GC_Utils.php';
 
-class SC_Batch_Ex extends SC_Batch
+/**
+ * 各種ユーティリティクラス(拡張).
+ *
+ * GC_Utils をカスタマイズする場合はこのクラスを使用する.
+ *
+ * @package Util
+ * @author LOCKON CO.,LTD.
+ * @version $Id$
+ */
+class GC_Utils_Ex extends GC_Utils
 {
 }
