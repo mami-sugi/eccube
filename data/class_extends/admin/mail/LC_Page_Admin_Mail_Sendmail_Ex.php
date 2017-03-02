@@ -21,8 +21,36 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-require_once CLASS_REALDIR . 'pages/admin/LC_Page_Admin.php';
+require_once CLASS_REALDIR . 'pages/admin/mail/LC_Page_Admin_Mail_Sendmail.php';
 
-class LC_Page_Admin_Ex extends LC_Page_Admin
+/**
+ * メール送信バッチのページクラス(拡張).
+ *
+ * LC_Page_Admin_Mail_Sendmail をカスタマイズする場合はこのクラスを編集する.
+ *
+ * @package Page
+ * @author LOCKON CO.,LTD.
+ * @version $Id$
+ */
+class LC_Page_Admin_Mail_Sendmail_Ex extends LC_Page_Admin_Mail_Sendmail
 {
+    /**
+     * Page を初期化する.
+     *
+     * @return void
+     */
+    function init()
+    {
+        parent::init();
+    }
+
+    /**
+     * Page のプロセス.
+     *
+     * @return void
+     */
+    function process()
+    {
+        parent::process();
+    }
 }

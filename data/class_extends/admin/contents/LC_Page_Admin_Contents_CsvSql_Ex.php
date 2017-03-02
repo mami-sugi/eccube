@@ -21,8 +21,36 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-require_once CLASS_REALDIR . 'pages/admin/LC_Page_Admin.php';
+require_once CLASS_REALDIR . 'pages/admin/contents/LC_Page_Admin_Contents_CsvSql.php';
 
-class LC_Page_Admin_Ex extends LC_Page_Admin
+/**
+ * CSV出力項目設定(高度な設定) のページクラス(拡張).
+ *
+ * LC_Page_Admin_Contents_CsvSql をカスタマイズする場合はこのクラスを編集する.
+ *
+ * @package Page
+ * @author LOCKON CO.,LTD.
+ * @version $Id$
+ */
+class LC_Page_Admin_Contents_CsvSql_Ex extends LC_Page_Admin_Contents_CsvSql
 {
+    /**
+     * Page を初期化する.
+     *
+     * @return void
+     */
+    function init()
+    {
+        parent::init();
+    }
+
+    /**
+     * Page のプロセス.
+     *
+     * @return void
+     */
+    function process()
+    {
+        parent::process();
+    }
 }

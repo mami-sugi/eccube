@@ -21,8 +21,36 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-require_once CLASS_REALDIR . 'pages/admin/LC_Page_Admin.php';
+require_once CLASS_REALDIR . 'pages/admin/system/LC_Page_Admin_System_Log.php';
 
-class LC_Page_Admin_Ex extends LC_Page_Admin
+/**
+ * ログ のページクラス(拡張).
+ *
+ * LC_Page_Admin_System_Log をカスタマイズする場合はこのクラスを編集する.
+ *
+ * @package Page
+ * @author Seasoft 塚田将久
+ * @version $Id$
+ */
+class LC_Page_Admin_System_Log_Ex extends LC_Page_Admin_System_Log
 {
+    /**
+     * Page を初期化する.
+     *
+     * @return void
+     */
+    function init()
+    {
+        parent::init();
+    }
+
+    /**
+     * Page のプロセス.
+     *
+     * @return void
+     */
+    function process()
+    {
+        parent::process();
+    }
 }

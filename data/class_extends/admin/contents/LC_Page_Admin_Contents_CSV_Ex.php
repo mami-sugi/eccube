@@ -21,8 +21,36 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-require_once CLASS_REALDIR . 'pages/admin/LC_Page_Admin.php';
+require_once CLASS_REALDIR . 'pages/admin/contents/LC_Page_Admin_Contents_CSV.php';
 
-class LC_Page_Admin_Ex extends LC_Page_Admin
+/**
+ * CSV 項目設定 のページクラス(拡張).
+ *
+ * LC_Page_Admin_Contents_CSV をカスタマイズする場合はこのクラスを編集する.
+ *
+ * @package Page
+ * @author LOCKON CO.,LTD.
+ * @version $Id$
+ */
+class LC_Page_Admin_Contents_CSV_Ex extends LC_Page_Admin_Contents_CSV
 {
+    /**
+     * Page を初期化する.
+     *
+     * @return void
+     */
+    function init()
+    {
+        parent::init();
+    }
+
+    /**
+     * Page のプロセス.
+     *
+     * @return void
+     */
+    function process()
+    {
+        parent::process();
+    }
 }

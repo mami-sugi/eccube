@@ -20,9 +20,36 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
+require_once CLASS_REALDIR . 'pages/admin/basis/LC_Page_Admin_Basis_Tradelaw.php';
 
-require_once CLASS_REALDIR . 'pages/admin/LC_Page_Admin.php';
-
-class LC_Page_Admin_Ex extends LC_Page_Admin
+/**
+ * 特定商取引法 のページクラス(拡張).
+ *
+ * LC_Page_Admin_Basis_Tradelaw をカスタマイズする場合はこのクラスを編集する.
+ *
+ * @package Page
+ * @author LOCKON CO.,LTD.
+ * @version $Id$
+ */
+class LC_Page_Admin_Basis_Tradelaw_Ex extends LC_Page_Admin_Basis_Tradelaw
 {
+    /**
+     * Page を初期化する.
+     *
+     * @return void
+     */
+    function init()
+    {
+        parent::init();
+    }
+
+    /**
+     * Page のプロセス.
+     *
+     * @return void
+     */
+    function process()
+    {
+        parent::process();
+    }
 }

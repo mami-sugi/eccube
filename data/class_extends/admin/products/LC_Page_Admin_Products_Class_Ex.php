@@ -21,8 +21,36 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-require_once CLASS_REALDIR . 'pages/admin/LC_Page_Admin.php';
+require_once CLASS_REALDIR . 'pages/admin/products/LC_Page_Admin_Products_Class.php';
 
-class LC_Page_Admin_Ex extends LC_Page_Admin
+/**
+ * 規格管理 のページクラス(拡張).
+ *
+ * LC_Page_Admin_Products_Class をカスタマイズする場合はこのクラスを編集する.
+ *
+ * @package Page
+ * @author LOCKON CO.,LTD.
+ * @version $Id$
+ */
+class LC_Page_Admin_Products_Class_Ex extends LC_Page_Admin_Products_Class
 {
+    /**
+     * Page を初期化する.
+     *
+     * @return void
+     */
+    function init()
+    {
+        parent::init();
+    }
+
+    /**
+     * Page のプロセス.
+     *
+     * @return void
+     */
+    function process()
+    {
+        parent::process();
+    }
 }
